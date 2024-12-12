@@ -1,7 +1,12 @@
+import os
+
+from dotenv import load_dotenv
 from ollama import Client
 
+load_dotenv()
+
 client = Client(
-  host='http://192.168.50.140:11434',
+  host=os.environ.get("OLLAMA_API_ENDPOINT"),
 )
 
 
