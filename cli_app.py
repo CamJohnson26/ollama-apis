@@ -1,7 +1,7 @@
 from cmd import Cmd
 
 from dotenv import load_dotenv
-from ollama_apis.run_prompt import chat
+from ollama_apis.run_prompt import chat, embed
 
 load_dotenv()
 # token = os.environ.get("")
@@ -22,6 +22,9 @@ class CLIApp(Cmd):
 
     def do_chat(self, prompt):
         chat(prompt)
+
+    def do_embed(self, prompt):
+        embed(prompt)
 
 
 if __name__ == '__main__':

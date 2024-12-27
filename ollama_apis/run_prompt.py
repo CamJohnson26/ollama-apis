@@ -18,3 +18,8 @@ def chat(prompt):
       },
     ])
     print(response.message.content)
+
+
+def embed(prompt):
+    response = client.embed(model='llama3.1', input=prompt)
+    print(response)
